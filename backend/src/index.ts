@@ -2,20 +2,6 @@ import express from "express";
 
 const app = express();
 
-//GET
-
-//PUT
-
-//POST
-
-//DELETE
-
-app.use(express.json());
-
-app.post("/", (req, res, next) => {
-  const name = req.body.name;
-  console.log(req.body.name);
-  return res.send(`${name} Back End server Welcome you`);
+app.post("/api/chat", (req, res) => {
+  res.send("Hello World!");
 });
-
-app.listen(3434, () => console.log("server starts operating"));
