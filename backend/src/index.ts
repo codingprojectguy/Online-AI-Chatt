@@ -4,8 +4,8 @@ const app = express();
 
 app.use(express.json());
 
-app.post("/hello", (req, res) => {
-  res.send("Hello World!");
+app.post("/", (req, res) => {
+  res.send("Backend connected!");
 });
 
 app.listen(7890, () => {
