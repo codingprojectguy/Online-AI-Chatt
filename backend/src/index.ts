@@ -2,14 +2,10 @@ import express from "express";
 
 const app = express();
 
+//middlewares
 app.use(express.json());
 
-app.post("/", (req, res) => {
-  const { name } = req.body.name;
-  console.log(name);
-  res.send(`Hello ${name} Backend server!`);
-});
-
+//connections and listeners
 app.listen(7890, () => {
   console.log("Server started on port 7890");
 });
